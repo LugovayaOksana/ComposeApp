@@ -3,6 +3,7 @@ package com.app.composeapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -11,6 +12,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Paint
+import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
+import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.Font
@@ -20,6 +24,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 class StyleActivity : ComponentActivity() {
@@ -38,7 +43,7 @@ class StyleActivity : ComponentActivity() {
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Color(0xFF101010))
+                    .background(Color(0xFF000000))
             ) {
                 Column(
                     modifier = Modifier
@@ -85,9 +90,45 @@ class StyleActivity : ComponentActivity() {
                         textAlign = TextAlign.Center,
                         textDecoration = TextDecoration.Underline,
                     )
+                    Canvas(
+                        modifier = Modifier.fillMaxSize(),
+                        onDraw = {
+                            drawIntoCanvas {
+                                it.nativeCanvas.drawText(
+                                    "Sample",
+                                    0f,
+                                    120.dp.toPx(),
+                                    textPaintStroke
+                                )
+                                it.nativeCanvas.drawText(
+                                    "Sample",
+                                    0f,
+                                    120.dp.toPx(),
+                                    textPaint
+                                )
+                            }
+                        }
+                    )
                 }
 
             }
         }
     }
+}
+
+val textPaintStroke = Paint().asFrameworkPaint().apply {
+    isAntiAlias = true
+    style = android.graphics.Paint.Style.STROKE
+    textSize = 128f
+    color = android.graphics.Color.RED
+    strokeWidth = 10f
+    strokeMiter= 10f
+    strokeJoin = android.graphics.Paint.Join.ROUND
+}
+
+val textPaint = Paint().asFrameworkPaint().apply {
+    isAntiAlias = true
+    style = android.graphics.Paint.Style.FILL
+    textSize = 128f
+    color = android.graphics.Color.WHITE
 }
