@@ -1,16 +1,17 @@
 package com.app.composeapp
 
+import android.annotation.SuppressLint
+import android.graphics.Typeface
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Paint
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
@@ -26,10 +27,27 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.*
 
 class StyleActivity : ComponentActivity() {
+
+    private var timerValue by mutableStateOf("")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        lifecycleScope.launch(Dispatchers.Default){
+            while (isActive) {
+                timerValue = updateTime()
+                delay(500L)
+            }
+        }
         val fontFamily = FontFamily(
             Font(R.font.lexend_bold, FontWeight.Thin),
             Font(R.font.lexend_light, FontWeight.Light),
@@ -40,6 +58,8 @@ class StyleActivity : ComponentActivity() {
             Font(R.font.lexend_extrabold, FontWeight.ExtraBold)
         )
         setContent {
+            val scope = rememberCoroutineScope()
+
             Box(
                 modifier = Modifier
                     .fillMaxSize()
@@ -90,20 +110,24 @@ class StyleActivity : ComponentActivity() {
                         textAlign = TextAlign.Center,
                         textDecoration = TextDecoration.Underline,
                     )
+
+                    Spacer(modifier = Modifier.height(30.dp))
+
+                    Spacer(modifier = Modifier.height(30.dp))
                     Canvas(
                         modifier = Modifier.fillMaxSize(),
                         onDraw = {
                             drawIntoCanvas {
                                 it.nativeCanvas.drawText(
-                                    "Sample",
+                                    timerValue,
                                     0f,
-                                    120.dp.toPx(),
+                                    8.dp.toPx(),
                                     textPaintStroke
                                 )
                                 it.nativeCanvas.drawText(
-                                    "Sample",
+                                    timerValue,
                                     0f,
-                                    120.dp.toPx(),
+                                    8.dp.toPx(),
                                     textPaint
                                 )
                             }
@@ -119,16 +143,28 @@ class StyleActivity : ComponentActivity() {
 val textPaintStroke = Paint().asFrameworkPaint().apply {
     isAntiAlias = true
     style = android.graphics.Paint.Style.STROKE
-    textSize = 128f
+    textSize = 34f
     color = android.graphics.Color.RED
-    strokeWidth = 10f
-    strokeMiter= 10f
+    strokeWidth = 6f
+    strokeMiter= 6f
     strokeJoin = android.graphics.Paint.Join.ROUND
 }
 
 val textPaint = Paint().asFrameworkPaint().apply {
     isAntiAlias = true
     style = android.graphics.Paint.Style.FILL
-    textSize = 128f
+    textSize = 34f
     color = android.graphics.Color.WHITE
 }
+
+
+@SuppressLint("SimpleDateFormat")
+fun updateTime():String {
+//    val customFont = Typeface.createFromAsset(this.assets, "font/Circe-ExtraBold.ttf")
+    val date = Date()
+    val fmt = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+    return fmt.format(date)
+}
+
+
+
