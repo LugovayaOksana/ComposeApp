@@ -11,29 +11,7 @@
         android:theme="@style/Theme.ComposeApp">
 
         <activity
-            android:name=".TextBtnSnack"
-            android:exported="true"
-            android:theme="@style/Theme.ComposeApp.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
-
-        <activity
-            android:name=".StateActivity"
-            android:exported="true"
-            android:theme="@style/Theme.ComposeApp.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
-
-        <activity
-            android:name=".StyleActivity"
+            android:name=".SideEffectsAndEffectsHandle"
             android:exported="true"
             android:theme="@style/Theme.ComposeApp.NoActionBar">
             <intent-filter>
@@ -44,7 +22,7 @@
         </activity>
 
         <activity
-            android:name=".ImgActivity"
+            android:name=".ConstraintLayout"
             android:exported="true"
             android:theme="@style/Theme.ComposeApp.NoActionBar">
 <!--            <intent-filter>-->
@@ -55,15 +33,59 @@
         </activity>
 
         <activity
+            android:name=".TextBtnSnack"
+            android:exported="true"
+            android:theme="@style/Theme.ComposeApp.NoActionBar">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".StateActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ComposeApp.NoActionBar">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".StyleActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ComposeApp.NoActionBar">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".ImgActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ComposeApp.NoActionBar">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeApp.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
         </activity>
     </application>
 
