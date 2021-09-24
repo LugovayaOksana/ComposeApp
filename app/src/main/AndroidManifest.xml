@@ -11,7 +11,7 @@
         android:theme="@style/Theme.ComposeApp">
 
         <activity
-            android:name=".SideEffectsAndEffectsHandle"
+            android:name=".SimpleAnimations"
             android:exported="true"
             android:theme="@style/Theme.ComposeApp.NoActionBar">
             <intent-filter>
@@ -19,6 +19,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SideEffectsAndEffectsHandle"
+            android:exported="true"
+            android:theme="@style/Theme.ComposeApp.NoActionBar">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
 
         <activity
