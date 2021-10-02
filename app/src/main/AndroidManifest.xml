@@ -11,7 +11,7 @@
         android:theme="@style/Theme.ComposeApp">
 
         <activity
-            android:name=".AnimatedCircularProgressBar"
+            android:name=".ButtonStyles"
             android:exported="true"
             android:theme="@style/Theme.ComposeApp.NoActionBar">
             <intent-filter>
@@ -22,36 +22,58 @@
         </activity>
 
         <activity
+            android:name=".AnimatedCircularProgressBar"
+            android:exported="true"
+            android:theme="@style/Theme.ComposeApp.NoActionBar">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".DraggableMusicKnob"
+            android:exported="true"
+            android:theme="@style/Theme.ComposeApp.NoActionBar">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+
+        <activity
             android:name=".SimpleAnimations"
             android:exported="true"
             android:theme="@style/Theme.ComposeApp.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
         </activity>
 
         <activity
             android:name=".SideEffectsAndEffectsHandle"
             android:exported="true"
             android:theme="@style/Theme.ComposeApp.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
         </activity>
 
         <activity
             android:name=".ConstraintLayout"
             android:exported="true"
             android:theme="@style/Theme.ComposeApp.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
         </activity>
 
         <activity
