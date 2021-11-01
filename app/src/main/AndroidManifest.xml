@@ -3,6 +3,7 @@
     package="com.app.composeapp">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,7 +12,18 @@
         android:theme="@style/Theme.ComposeApp">
 
         <activity
-            android:name=".ButtonStyles"
+            android:name=".presentation.StartActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ComposeApp.NoActionBar">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".presentation.Authentication"
             android:exported="true"
             android:theme="@style/Theme.ComposeApp.NoActionBar">
             <intent-filter>
@@ -22,115 +34,65 @@
         </activity>
 
         <activity
-            android:name=".AnimatedCircularProgressBar"
+            android:name=".calculator.Calculator"
             android:exported="true"
-            android:theme="@style/Theme.ComposeApp.NoActionBar">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
+            android:theme="@style/Theme.ComposeApp.NoActionBar"/>
 
         <activity
-            android:name=".DraggableMusicKnob"
+            android:name=".presentation.ButtonStyles"
             android:exported="true"
-            android:theme="@style/Theme.ComposeApp.NoActionBar">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
+            android:theme="@style/Theme.ComposeApp.NoActionBar"/>
 
         <activity
-            android:name=".SimpleAnimations"
+            android:name=".presentation.AnimatedCircularProgressBar"
             android:exported="true"
-            android:theme="@style/Theme.ComposeApp.NoActionBar">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
+            android:theme="@style/Theme.ComposeApp.NoActionBar"/>
 
         <activity
-            android:name=".SideEffectsAndEffectsHandle"
+            android:name=".presentation.DraggableMusicKnob"
             android:exported="true"
-            android:theme="@style/Theme.ComposeApp.NoActionBar">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
+            android:theme="@style/Theme.ComposeApp.NoActionBar"/>
 
         <activity
-            android:name=".ConstraintLayout"
+            android:name=".presentation.SimpleAnimations"
             android:exported="true"
-            android:theme="@style/Theme.ComposeApp.NoActionBar">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
+            android:theme="@style/Theme.ComposeApp.NoActionBar"/>
 
         <activity
-            android:name=".TextBtnSnack"
+            android:name=".presentation.SideEffectsAndEffectsHandle"
             android:exported="true"
-            android:theme="@style/Theme.ComposeApp.NoActionBar">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
+            android:theme="@style/Theme.ComposeApp.NoActionBar"/>
 
         <activity
-            android:name=".StateActivity"
+            android:name=".presentation.ConstraintLayout"
             android:exported="true"
-            android:theme="@style/Theme.ComposeApp.NoActionBar">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
+            android:theme="@style/Theme.ComposeApp.NoActionBar"/>
 
         <activity
-            android:name=".StyleActivity"
+            android:name=".presentation.TextBtnSnack"
             android:exported="true"
-            android:theme="@style/Theme.ComposeApp.NoActionBar">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
+            android:theme="@style/Theme.ComposeApp.NoActionBar"/>
 
         <activity
-            android:name=".ImgActivity"
+            android:name=".presentation.StateActivity"
             android:exported="true"
-            android:theme="@style/Theme.ComposeApp.NoActionBar">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
+            android:theme="@style/Theme.ComposeApp.NoActionBar"/>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.StyleActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ComposeApp.NoActionBar"/>
+
+        <activity
+            android:name=".presentation.ImgActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ComposeApp.NoActionBar" />
+
+        <activity
+            android:name=".presentation.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.ComposeApp.NoActionBar">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
+            android:theme="@style/Theme.ComposeApp.NoActionBar" />
     </application>
 
 </manifest>

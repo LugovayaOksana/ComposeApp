@@ -1,4 +1,4 @@
-package com.app.composeapp
+package com.app.composeapp.presentation
 
 import android.os.Bundle
 import android.view.MotionEvent
@@ -24,8 +24,8 @@ import androidx.compose.ui.layout.boundsInWindow
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.app.composeapp.R
 import java.lang.Math.PI
-import java.lang.Math.atan2
 import kotlin.math.atan2
 import kotlin.math.roundToInt
 

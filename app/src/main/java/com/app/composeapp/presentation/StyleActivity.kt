@@ -1,4 +1,4 @@
-package com.app.composeapp
+package com.app.composeapp.presentation
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -29,6 +29,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.lifecycleScope
+import com.app.composeapp.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive

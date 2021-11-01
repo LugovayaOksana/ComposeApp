@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
+ext.koinVersion = '3.0.2'
 
 android {
     compileSdk 31
@@ -66,4 +67,13 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 
     implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.0-beta02'
+
+
+    // Logging
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    // Koin for Android
+    implementation "io.insert-koin:koin-core:$koinVersion"
+    implementation "io.insert-koin:koin-android:$koinVersion"
+    implementation "io.insert-koin:koin-android-ext:$koinVersion"
 }
